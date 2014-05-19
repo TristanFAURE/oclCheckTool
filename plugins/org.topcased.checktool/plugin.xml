@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension-point id="org.topcased.checktool.rulesets.rulefilemanager" name="Rule File Manager" schema="schema/org.topcased.checktool.rulesets.rulefilemanager.exsd"/>
+   <extension
+         id="org.topcased.checktool.application"
+         point="org.eclipse.core.runtime.applications">
+      <application
+            cardinality="singleton-global"
+            thread="main"
+            visible="true">
+         <run
+               class="org.topcased.checktool.application.BatchModeApplication">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.emf.ecore.extension_parser">
+      <parser
+            class="org.topcased.checktool.results.util.ResultsResourceFactoryImpl"
+            type="result">
+      </parser>
+   </extension>
+
+</plugin>

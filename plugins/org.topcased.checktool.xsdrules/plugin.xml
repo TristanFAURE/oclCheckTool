@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         id="http:///www.topcased.org/checktool/xsdRules.ecore"
+         point="org.topcased.checktool.rulesets.rulefilemanager">
+      <manager
+            Extension="xsd"
+            Manager="org.topcased.checktool.xsdrules.XSDRuleFileManager">
+      </manager>
+   </extension>
+   <extension
+         point="org.eclipse.emf.ecore.generated_package">
+      <package
+            class="org.topcased.checktool.xsdrules.xsdRules.XsdRulesPackage"
+            genModel="model/checktool.results.xsdrules.genmodel"
+            uri="http:///www.topcased.org/checktool/xsdRules.ecore">
+      </package>
+   </extension>
+
+</plugin>
